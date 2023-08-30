@@ -3,6 +3,10 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Index from "./pages";
 import Movies from "./pages/movies";
+import TvSeries from "./pages/tvseries";
+import Search from "./pages/search";
+import Title from "./pages/title";
+
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -15,16 +19,16 @@ const router = createBrowserRouter([
 		element: <Movies />,
 	},
 	{
-		path: "/tv",
-		element: <Index />,
+		path: "/tvseries",
+		element: <TvSeries />,
 	},
 	{
 		path: "/search",
-		element: <Index />,
+		element: <Search />,
 	},
 	{
 		path: "/title",
-		element: <Index />,
+		element: <Title />,
 	},
 ]);
 
