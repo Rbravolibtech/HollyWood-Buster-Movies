@@ -8,7 +8,6 @@ export default function Layout(props) {
 			<header>
 				<Navbar expand="lg" className="bg-body-tertiary">
 					<Container>
-						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="me-auto">
 								<Nav.Link href="#index">Index</Nav.Link>
