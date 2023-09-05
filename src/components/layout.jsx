@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 export default function Layout(props) {
 	return (
-		<div>
+		<div className="navbar">
 			<header>
 				<Navbar expand="lg" className="bg-body-tertiary">
 					<Container>
