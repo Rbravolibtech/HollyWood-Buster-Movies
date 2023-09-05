@@ -20,7 +20,9 @@ export default function Layout(props) {
 				</Navbar>
 			</header>
 			{props.children}
-			<footer></footer>
+			<footer>
+				<p>Powered by TMDb</p>
+			</footer>
 		</div>
 	);
 }
