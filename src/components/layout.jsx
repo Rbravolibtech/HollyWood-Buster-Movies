@@ -10,10 +10,10 @@ export default function Layout(props) {
 					<Container>
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="me-auto">
-								<Nav.Link href="#index">Index</Nav.Link>
-								<Nav.Link href="#movies.jsx">Movies</Nav.Link>
-								<Nav.Link href="#tvseries">TvSeries</Nav.Link>
-								<Nav.Link href="#search">Search</Nav.Link>
+								<Nav.Link href="/">Home</Nav.Link>
+								<Nav.Link href="movies">Movies</Nav.Link>
+								<Nav.Link href="tvseries">TvSeries</Nav.Link>
+								<Nav.Link href="search">Search</Nav.Link>
 							</Nav>
 						</Navbar.Collapse>
 					</Container>
