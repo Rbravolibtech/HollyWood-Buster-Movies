@@ -6,13 +6,18 @@ import Movies from "./pages/movies";
 import TvSeries from "./pages/tvseries";
 import Search from "./pages/search";
 import Title from "./pages/title";
+import Layout from "./components/layout";
 
 import "./index.css";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Index />,
+		element: (
+			<Layout>
+				<Index />
+			</Layout>
+		),
 	},
 	{
 		path: "/movies",
