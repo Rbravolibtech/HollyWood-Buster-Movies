@@ -29,15 +29,27 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/tvseries",
-		element: <TvSeries />,
+		element: (
+			<Layout>
+				<TvSeries />
+			</Layout>
+		),
 	},
 	{
 		path: "/search",
-		element: <Search />,
+		element: (
+			<Layout>
+				<Search />
+			</Layout>
+		),
 	},
 	{
 		path: "/title",
-		element: <Title />,
+		element: (
+			<Layout>
+				<Title />
+			</Layout>
+		),
 	},
 ]);
 
