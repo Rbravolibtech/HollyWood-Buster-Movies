@@ -1,5 +1,5 @@
 function Page() {
-	return <p>Hello movies</p>;
+	return <p>Movies</p>;
 }
 
 export default Page;

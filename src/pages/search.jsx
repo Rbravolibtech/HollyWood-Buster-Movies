@@ -1,5 +1,5 @@
 function Page() {
-	return <p>Hello Search</p>;
+	return <p>Search</p>;
 }
 
 export default Page;

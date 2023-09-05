@@ -1,5 +1,5 @@
 function Page() {
-	return <p>Hello Tv Series</p>;
+	return <p>Tv Series</p>;
 }
 
 export default Page;
