@@ -1,14 +1,19 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import '../index.css';
+import "../index.css";
 
 export default function Layout(props) {
 	return (
 		<div className="navbar">
 			<header>
-				<Navbar expand="lg" className="bg-body-tertiary sideNav" style={{ width: '10%', paddingTop: '5%' }}>
+				<Navbar
+					expand="lg"
+					className="bg-body-tertiary sideNav"
+					style={{ width: "10%", paddingTop: "5%" }}
+				>
 					<Container>
+						<img src="../../public/logo-transparent-svg.svg"></img>
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="me-auto">
 								<Nav.Link href="/">Home</Nav.Link>
@@ -27,6 +32,6 @@ export default function Layout(props) {
 			<footer>
 				<p>Powered by TMDb</p>
 			</footer>
-		</div >
+		</div>
 	);
 }
