@@ -1,12 +1,19 @@
+import Container from "react-bootstrap/Container";
+import '../index.css';
+
 function Page() {
 	return (
-		<>
-			<p>Welcome to Hollywood-Buster</p>
-			<br />
-			<p>Movies</p>
-			<br />
-			<p>TV Shows</p>
-		</>
+		<Container className='mainContent'>
+			<div>
+				<p>Welcome to Hollywood-Buster</p>
+			</div>
+			<div>
+				<p>Movies</p>
+			</div>
+			<div>
+				<p>TV Shows</p>
+			</div>
+		</Container>
 	);
 }
 
