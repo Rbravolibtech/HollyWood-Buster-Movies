@@ -4,7 +4,7 @@ function Card({ movie }) {
 	return (
 		<div className="card">
 			{
-				// add content to display movie info
+				movie.title// add content to display movie info
 			}
 		</div>
 	);
