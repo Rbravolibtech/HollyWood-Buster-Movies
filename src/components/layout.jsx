@@ -13,7 +13,7 @@ export default function Layout(props) {
 					style={{ width: "10%", paddingTop: "5%" }}
 				>
 					<Container>
-						<img className="logo" src="/public/logo-transparent-svg.svg"></img>
+						<img className="logo" src="/logo-transparent-svg.svg"></img>
 						<Navbar.Collapse id="basic-navbar-nav">
 							<Nav className="me-auto">
 								<Nav.Link href="/">Home</Nav.Link>
