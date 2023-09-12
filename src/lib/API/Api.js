@@ -1,5 +1,5 @@
 //Functions are set up to only return the information we will use in the cards
-//movie/tv show id is id, movie/tv show title is title, movie/tv show poser_path is image, movie/tv show release_date is date
+//id is id, title is title, poser_path is image, release_date is date
 
 export async function getTrendingMovies() {
     try {
