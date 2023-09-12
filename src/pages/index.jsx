@@ -35,16 +35,13 @@ function Page() {
 	return (
 		<Container className="mainContent">
 			<div>
-				<p>Welcome to Hollywood-Buster</p>
-			</div>
-			<div>
-				<p>Movies</p>
+				<h2>Movies</h2>
 				{movies.map((m) => {
 					return <Card movie={m} key={m.id} />
 				})}
 			</div>
 			<div>
-				<p>TV Shows</p>
+				<h2>TV Shows</h2>
 			</div>
 		</Container>
 	);

@@ -9,8 +9,6 @@ function Cards({ movie }) {
 				<Card.Title>{movie.title} | {movie.date}</Card.Title>
 			</Card.ImgOverlay>
 		</Card>
-
-		//<div className="card">{movie.title}</div>;
 	)
 }
 

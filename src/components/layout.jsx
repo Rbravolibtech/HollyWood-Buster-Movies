@@ -20,7 +20,7 @@ export default function Layout(props) {
 								<br />
 								<Nav.Link href="movies">Movies</Nav.Link>
 								<br />
-								<Nav.Link href="tvseries">TvSeries</Nav.Link>
+								<Nav.Link href="tvseries">Tv Shows</Nav.Link>
 								<br />
 								<Nav.Link href="search">Search</Nav.Link>
 							</Nav>
@@ -28,6 +28,9 @@ export default function Layout(props) {
 					</Container>
 				</Navbar>
 			</header>
+			<div>
+				<h1>Endless Movie Fun!</h1>
+			</div>
 			{props.children}
 			<footer>
 				<p>Powered by TMDb</p>
