@@ -1,6 +1,6 @@
-import Container from "react-bootstrap/Container";
+
 import React from "react";
-import "../index.css";
+import styles from "./index.module.css";
 import Card from "../components/card";
 import { getTrendingMovies } from "../lib/API/Api";
 
@@ -24,26 +24,22 @@ function Page() {
 		setLoadingMovies(false);
 	}, [])
 
-	if (loadingMovies) {
-		return <p>loading</p>;
-	}
-
-	if (errorMovies) {
-		return <p>{errorMovies}</p>
-	}
-
 	return (
-		<Container className="mainContent">
+		<div className="mainContent">
 			<div>
 				<h2>Movies</h2>
-				{movies.map((m) => {
-					return <Card movie={m} key={m.id} />
-				})}
+				<div className={styles.movies}>
+					{loadingMovies && <p>Loading</p>}
+					{errorMovies && <p>{errorMovies}</p>}
+					{!loadingMovies && !errorMovies && movies.map((m) => {
+						return <Card key={m.id} movie={m} />
+					})}
+				</div>
 			</div>
 			<div>
 				<h2>TV Shows</h2>
 			</div>
-		</Container>
+		</div>
 	);
 }
 

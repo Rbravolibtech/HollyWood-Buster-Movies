@@ -5,7 +5,7 @@ import "../index.css";
 
 export default function Layout(props) {
 	return (
-		<div className="navbar">
+		<>
 			<header>
 				<Navbar
 					expand="lg"
@@ -35,6 +35,6 @@ export default function Layout(props) {
 			<footer>
 				<p>Powered by TMDb</p>
 			</footer>
-		</div>
+		</>
 	);
 }
