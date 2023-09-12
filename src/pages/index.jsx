@@ -5,12 +5,11 @@ import Card from "../components/card";
 import { getTrendingMovies } from "../lib/API/Api";
 
 function Page() {
-	const [loadingMovies, setLoadingMovies] = React.useState(false);
+	const [loadingMovies, setLoadingMovies] = React.useState(true);
 	const [errorMovies, setErrorMovies] = React.useState("");
 	const [movies, setMovies] = React.useState([]);
 
 	React.useEffect(() => {
-		setLoadingMovies(true);
 		const moviesFetch = async () => {
 			const moviesArray = await getTrendingMovies();
 			console.log(moviesArray);
@@ -19,17 +18,17 @@ function Page() {
 			} else {
 				setMovies(moviesArray);
 			}
-		}
+		};
 		moviesFetch();
 		setLoadingMovies(false);
-	}, [])
+	}, []);
 
 	if (loadingMovies) {
 		return <p>loading</p>;
 	}
 
 	if (errorMovies) {
-		return <p>{errorMovies}</p>
+		return <p>{errorMovies}</p>;
 	}
 
 	return (
@@ -40,7 +39,7 @@ function Page() {
 			<div>
 				<p>Movies</p>
 				{movies.map((m) => {
-					return <Card movie={m} key={m.id} />
+					return <Card movie={m} key={m.id} />;
 				})}
 			</div>
 			<div>
