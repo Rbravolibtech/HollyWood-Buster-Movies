@@ -13,8 +13,8 @@ export async function getTrendingMovies() {
             return {
                 id: i.id,
                 title: i.title,
-                image: i.poster_path,
-                date: i.release_date,
+                image: "https://image.tmdb.org/t/p/w300" + i.poster_path,
+                date: i.release_date.slice(0, 4),
             }
         })
     }
