@@ -13,7 +13,6 @@ function Page() {
 		setLoadingMovies(true);
 		const moviesFetch = async () => {
 			const moviesArray = await getTrendingMovies();
-			console.log(moviesArray);
 			if (moviesArray.length < 1) {
 				setErrorMovies("No movies found");
 			} else {
