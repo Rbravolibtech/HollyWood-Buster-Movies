@@ -10,4 +10,5 @@ function Cards({ movie }) {
 		</div>
 	);
 }
+
 export default Cards;
