@@ -43,8 +43,8 @@ function Page() {
 	}, [])
 
 	return (
-		<div className="mainContent">
-			<div>
+		<div>
+			<div className="titleCards">
 				<h2>Movies</h2>
 				<div className={styles.movies}>
 					{loadingMovies && <p>Loading</p>}
@@ -54,8 +54,10 @@ function Page() {
 					})}
 				</div>
 			</div>
-			<div>
-				<h2>TV Shows</h2>
+			<div className="titleCards">
+				<div>
+					<h2>TV Shows</h2>
+				</div>
 				<div className={styles.movies}>
 					{loadingTVShows && <p>Loading</p>}
 					{errorTVShows && <p>{errorTVShows}</p>}

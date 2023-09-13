@@ -8,61 +8,39 @@ export default function Layout(props) {
 	return (
 		<>
 			<header>
-				{
-					/* <Navbar
-					expand="lg"
-					className="bg-body-tertiary sideNav"
-					style={{ width: "10%", paddingTop: "5%" }}
-				>
-					<Container>
-
-						<Navbar.Collapse id="basic-navbar-nav">
-							<Nav className="me-auto">
-								<Nav.Link href="/">Home</Nav.Link>
-								<br />
-								<Nav.Link href="movies">Movies</Nav.Link>
-								<br />
-								<Nav.Link href="tvseries">Tv Shows</Nav.Link>
-								<br />
-								<Nav.Link href="search">Search</Nav.Link>
-							</Nav>
-						</Navbar.Collapse>
-					</Container>
-				</Navbar> */
-					<nav className="sideNav">
-						<img className="logo" src="/logo-transparent-svg.svg"></img>
-						<ul className="navList">
-							<div>
-								<Link to="/" className="navLink">
-									Home
-								</Link>
-							</div>
-							<div>
-								<Link to="/movies" className="navLink">
-									Movies
-								</Link>
-							</div>
-							<div>
-								<Link to="/tvseries" className="navLink">
-									Tv Shows
-								</Link>
-							</div>
-							<div>
-								<Link to="/search" className="navLink">
-									Search
-								</Link>
-							</div>
-						</ul>
-					</nav>
-				}
+				<nav className="sideNav">
+					<img className="logo" src="/logo-transparent-svg.svg"></img>
+					<ul className="navList">
+						<div>
+							<Link to="/" className="navLink">
+								Home
+							</Link>
+						</div>
+						<div>
+							<Link to="/movies" className="navLink">
+								Movies
+							</Link>
+						</div>
+						<div>
+							<Link to="/tvseries" className="navLink">
+								Tv Shows
+							</Link>
+						</div>
+						<div>
+							<Link to="/search" className="navLink">
+								Search
+							</Link>
+						</div>
+					</ul>
+				</nav>
 			</header>
-			<div>
-				<h1>Endless Movie Fun!</h1>
-			</div>
+			<div className="slogan">
+				<h1>Hollywood<span style={{ color: '#f89c2a' }}>Buster</span></h1>
+			</div >
 			{props.children}
-			<footer>
+			< footer className="footer" >
 				<p>Powered by TMDb</p>
-			</footer>
+			</footer >
 		</>
 	);
 }
