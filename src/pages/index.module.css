@@ -1,10 +1,10 @@
 .movies {
   display: flex;
-  column-gap: 20px;
-  padding: 20px;
+  column-gap: 25px;
 }
 
 .titleCards {
   overflow-x: auto;
   margin-left: 225px;
+  margin-right: 25px;
 }
