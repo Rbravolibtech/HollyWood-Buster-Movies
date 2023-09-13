@@ -32,26 +32,26 @@ export default function Layout(props) {
 					<nav className="sideNav">
 						<img className="logo" src="/logo-transparent-svg.svg"></img>
 						<ul className="navList">
-							<li className="navItem">
+							<div>
 								<Link to="/" className="navLink">
 									Home
 								</Link>
-							</li>
-							<li className="navItem">
+							</div>
+							<div>
 								<Link to="/movies" className="navLink">
 									Movies
 								</Link>
-							</li>
-							<li className="navItem">
+							</div>
+							<div>
 								<Link to="/tvseries" className="navLink">
 									Tv Shows
 								</Link>
-							</li>
-							<li className="navItem">
+							</div>
+							<div>
 								<Link to="/search" className="navLink">
 									Search
 								</Link>
-							</li>
+							</div>
 						</ul>
 					</nav>
 				}
