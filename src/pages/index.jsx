@@ -1,4 +1,3 @@
-
 import React from "react";
 import styles from "./index.module.css";
 import Card from "../components/card";
@@ -25,7 +24,7 @@ function Page() {
 			} else {
 				setMovies(moviesArray);
 			}
-		}
+		};
 
 		const tvFetch = async () => {
 			const tvArray = await getTrendingTVShows();
@@ -34,36 +33,40 @@ function Page() {
 			} else {
 				setTVShows(tvArray);
 			}
-		}
+		};
 
 		moviesFetch();
 		tvFetch();
 		setLoadingMovies(false);
 		setLoadingTVShows(false);
-	}, [])
+	}, []);
 
 	return (
-		<div>
-			<div className="titleCards">
+		<div className={styles.mainContent}>
+			<div className={styles.titleCards}>
 				<h2>Movies</h2>
 				<div className={styles.movies}>
 					{loadingMovies && <p>Loading</p>}
 					{errorMovies && <p>{errorMovies}</p>}
-					{!loadingMovies && !errorMovies && movies.map((m) => {
-						return <Card key={m.id} movie={m} />
-					})}
+					{!loadingMovies &&
+						!errorMovies &&
+						movies.map((m) => {
+							return <Card key={m.id} movie={m} />;
+						})}
 				</div>
 			</div>
-			<div className="titleCards">
+			<div className={styles.titleCards}>
 				<div>
 					<h2>TV Shows</h2>
 				</div>
 				<div className={styles.movies}>
 					{loadingTVShows && <p>Loading</p>}
 					{errorTVShows && <p>{errorTVShows}</p>}
-					{!loadingTVShows && !errorTVShows && TVShows.map((m) => {
-						return <Card key={m.id} movie={m} />
-					})}
+					{!loadingTVShows &&
+						!errorTVShows &&
+						TVShows.map((m) => {
+							return <Card key={m.id} movie={m} />;
+						})}
 				</div>
 			</div>
 		</div>
