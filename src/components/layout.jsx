@@ -35,12 +35,14 @@ export default function Layout(props) {
 				</nav>
 			</header>
 			<div className="slogan">
-				<h1>Hollywood<span style={{ color: '#f89c2a' }}>Buster</span></h1>
-			</div >
+				<h1>
+					Hollywood<span style={{ color: "#f89c2a" }}>Buster</span>
+				</h1>
+			</div>
 			{props.children}
-			< footer className="footer" >
+			<footer className="footer">
 				<p>Powered by TMDb</p>
-			</footer >
+			</footer>
 		</>
 	);
 }
