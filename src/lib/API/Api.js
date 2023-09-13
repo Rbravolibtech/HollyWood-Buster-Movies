@@ -32,7 +32,6 @@ export async function getTrendingTVShows() {
             throw new Error(`HTTP error. Status: ${response.status}`);
         }
         const { results } = await response.json();
-        console.log(results);
         return results.map((i) => {
             return {
                 id: i.id,
