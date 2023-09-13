@@ -1,4 +1,10 @@
 .movies {
+<<<<<<< HEAD
     display: flex;
     column-gap: 25px;
 }
+=======
+  display: flex;
+  padding: 20px;
+}
+>>>>>>> 6ba0e0e (add some changes)
