@@ -21,7 +21,7 @@ function Page() {
 	return (
 		<div>
 			<div>
-				<img src={`${photo}`} alt=""></img>
+				<img src={`${movie.photo}`} alt=""></img>
 			</div>
 			<div>
 				<h1>{Title}</h1>
