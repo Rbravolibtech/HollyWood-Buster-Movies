@@ -46,3 +46,34 @@ export async function getTrendingTVShows() {
         return [];
     }
 }
+
+export async function getTitlePageInfo() {
+    try {
+        const movieDetailsURL = 'https://api.themoviedb.org/3/movie/movie_id?api_key=' + import.meta.env.VITE_TMDB_KEY;
+        const TVDetailsURL = 'https://api.themoviedb.org/3/tv/series_id?api_key=' + import.meta.env.VITE_TMDB_KEY;
+        const movieResponse = await fetch(movieDetailsURL);
+        const TVResponse = await fetch(TVDetailsURL);
+        if (!movieResponse.ok || !TVResponse.ok) {
+            throw new Error(`HTTP error. Status: ${response.status}`);
+        }
+        const { movieResults } = await movieResponse.json();
+        const { TVResults } = await TVResponse.json();
+        return TVResults.map((i) => {
+            return {
+                id: i.id,
+                title: i.name,
+                poster: "https://image.tmdb.org/t/p/w300" + i.poster_path,
+                photo: "https://image.tmdb.org/t/p/w300" + i.backdrop_path,
+                date: i.first_air_date.slice(0, 4),
+                rating: i.vote_average,
+                seasons: i.number_of_seasons,
+                language: i.original_language,
+                overview: i.overview
+            }
+        })
+    }
+    catch (error) {
+        console.error('Fetch error:', error);
+        return [];
+    }
+}
