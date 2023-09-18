@@ -6,7 +6,7 @@ function Cards({ movie }) {
 			className="cardTitle"
 			href={"/title?id=" + movie.id + "&type=" + movie.type}
 		>
-			<img src={movie.photo} />
+			<img src={movie.image} />
 			<h4>
 				{movie.title} | {movie.date}
 			</h4>
