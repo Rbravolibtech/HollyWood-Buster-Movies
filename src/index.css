@@ -109,4 +109,6 @@ ul.div {
 .footer {
   display: flex;
   justify-content: start;
+  margin: 10px;
+  padding-left: 210px;
 }
