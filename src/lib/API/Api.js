@@ -53,8 +53,11 @@ export async function getTitlePageInfo() {
         const TVDetailsURL = 'https://api.themoviedb.org/3/tv/series_id?api_key=' + import.meta.env.VITE_TMDB_KEY;
         const movieResponse = await fetch(movieDetailsURL);
         const TVResponse = await fetch(TVDetailsURL);
-        if (!movieResponse.ok || !TVResponse.ok) {
-            throw new Error(`HTTP error. Status: ${response.status}`);
+        if (!movieResponse.ok) {
+            throw new Error(`HTTP error. Status: ${movieResponse.status}`);
+        }
+        if (!TVResponse.ok) {
+            throw new Error(`HTTP error. Status: ${TVResponse.status}`);
         }
         const { movieResults } = await movieResponse.json();
         const { TVResults } = await TVResponse.json();
