@@ -5,33 +5,51 @@ import { getTitlePageInfo } from "../lib/API/Api";
 function Page() {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const [movie, setMovie] = React.useState();
+	const [error, setError] = React.useState("");
+	const [loading, setLoading] = React.useState(true);
 
 	React.useEffect(() => {
 		const id = searchParams.get("id");
 		const type = searchParams.get("type");
 
 		async function fetchData() {
-			const data = await getTitlePageInfo(id, type);
-			setMovie(data);
+			try {
+				const data = await getTitlePageInfo(id, type);
+				if (!data) {
+					setError("Failed to fetch the data");
+				} else {
+					setMovie(data);
+				}
+			} catch (error) {
+				setError("An error occurred while fetching the data");
+			} finally {
+				setLoading(false); // Move setLoading inside fetchData
+			}
 		}
 
 		fetchData();
 	}, []);
 
+	if (loading) {
+		return <p>Loading...</p>
+	}
+
+	if (error !== "") return <p>ERROR BUDDY</p>
+
 	return (
 		<div>
 			<div>
-				<img src={`${movie.photo}`} alt=""></img>
+				<img src={movie.photo} alt="" />
 			</div>
 			<div>
-				<h1>{Title}</h1>
+				<h1>{movie.title}</h1>
 			</div>
 
 			<div>
-				<p>{Rating}</p>
-				<p>{type === "movie" ? movie.release_date : movie.first_air_date}</p>
-				<p>{type === "movie" ? movie.runtime : movie.seasons}</p>
-				<p>{Language}</p>
+				<p>{movie.rating}</p>
+				<p>{movie.date}</p>
+				<p>{movie.runtime}</p>
+				<p>{movie.language}</p>
 			</div>
 		</div>
 	);

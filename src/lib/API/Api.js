@@ -9,6 +9,7 @@ export async function getTrendingMovies() {
             throw new Error(`HTTP error. Status: ${response.status}`);
         }
         const { results } = await response.json();
+        console.log(results);
         return results.map((i) => {
             return {
                 id: i.id,
@@ -52,53 +53,57 @@ export async function getTrendingTVShows() {
 export async function getTitlePageInfo(id, type) {
     try {
         if (type === 'movie') {
-            const movieDetailsURL = 'https://api.themoviedb.org/3/movie/movie_id?api_key=' + import.meta.env.VITE_TMDB_KEY;
+            const movieDetailsURL = `https://api.themoviedb.org/3/movie/${id}?api_key=` + import.meta.env.VITE_TMDB_KEY;
             const movieResponse = await fetch(movieDetailsURL);
             if (!movieResponse.ok) {
                 throw new Error(`HTTP error. Status: ${movieResponse.status}`);
             }
-            const { movieResults } = await movieResponse.json();
-            return movieResults.map((i) => {
-                return {
-                    id: i.id,
-                    title: i.title,
-                    poster: "https://image.tmdb.org/t/p/w300" + i.poster_path,
-                    photo: "https://image.tmdb.org/t/p/w300" + i.backdrop_path,
-                    date: i.release_date.slice(0, 4),
-                    rating: i.vote_average,
-                    runtime: i.runtime,
-                    language: i.original_language,
-                    overview: i.overview
-                }
-            })
+            
+            const movieResults = await movieResponse.json();
+
+            if (!movieResults) {
+                throw new Error('Movie details not found');
+            }
+            return {
+                id: movieResults.id,
+                title: movieResults.title,
+                poster: "https://image.tmdb.org/t/p/w300" + movieResults.poster_path,
+                photo: "https://image.tmdb.org/t/p/w300" + movieResults.backdrop_path,
+                date: movieResults.release_date.slice(0, 4),
+                rating: movieResults.vote_average,
+                runtime: movieResults.runtime,
+                language: movieResults.original_language,
+                overview: movieResults.overview
+            };
         }
 
         if (type === 'tv') {
-            const TVDetailsURL = 'https://api.themoviedb.org/3/tv/series_id?api_key=' + import.meta.env.VITE_TMDB_KEY;
+            const TVDetailsURL = `https://api.themoviedb.org/3/tv/${id}?api_key=` + import.meta.env.VITE_TMDB_KEY;
             const TVResponse = await fetch(TVDetailsURL);
             if (!TVResponse.ok) {
                 throw new Error(`HTTP error. Status: ${TVResponse.status}`);
             }
-            const { TVResults } = await TVResponse.json();
-            return TVResults.map((i) => {
-                return {
-                    id: i.id,
-                    title: i.name,
-                    poster: "https://image.tmdb.org/t/p/w300" + i.poster_path,
-                    photo: "https://image.tmdb.org/t/p/w300" + i.backdrop_path,
-                    date: i.first_air_date.slice(0, 4),
-                    rating: i.vote_average,
-                    seasons: i.number_of_seasons,
-                    language: i.original_language,
-                    overview: i.overview
-                }
-            })
+            const TVResults = await TVResponse.json();
+            if (!TVResults) {
+                throw new Error('TV details not found');
+            }
+            return {
+                id: TVResults.id,
+                title: TVResults.name,
+                poster: "https://image.tmdb.org/t/p/w300" + TVResults.poster_path,
+                photo: "https://image.tmdb.org/t/p/w300" + TVResults.backdrop_path,
+                date: TVResults.first_air_date.slice(0, 4),
+                rating: TVResults.vote_average,
+                runtime: TVResults.number_of_seasons,
+                language: TVResults.original_language,
+                overview: TVResults.overview
+            }
         }
         
         throw new Error('Invalid media type provided')
     }
     catch (error) {
         console.error('Fetch error:', error.message);
-        return [];
+        return undefined;
     }
 }
