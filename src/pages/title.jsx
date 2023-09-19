@@ -42,13 +42,13 @@ function Page() {
 	return (
 		<div className={styles.titleMain}>
 			<div className={styles.titlePhoto} >
-				<div style={{ background: `linear-gradient(-90deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top left` }}>image</div>
-				<div>
+				<div style={{ background: `linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top right`, width: "70%" }}></div>
+				<div style={{ backgroundColor: "black", width: "30%" }}>
 					<h1>{movie.title}</h1>
 					<p>{movie.overview}</p>
 				</div>
 			</div>
-			<div className="titleInfo">
+			<div className={styles.titleInfo}>
 				<img src={movie.poster} alt="" />
 				<div>
 					<p>Rating: {movie.rating}</p>
