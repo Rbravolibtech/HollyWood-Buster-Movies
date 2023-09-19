@@ -1,6 +1,7 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { getTitlePageInfo } from "../lib/API/Api";
+import styles from "./title.module.css";
 
 function Page() {
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -39,10 +40,13 @@ function Page() {
 	const type = searchParams.get("type");
 
 	return (
-		<div className="titleMain">
-			<div className="titlePhoto" style={{ backgroundImage: `linear-gradient(90deg, rgba(161, 0, 255, 0) 20%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo})` }}>
-				<h1>{movie.title}</h1>
-				<p>{movie.overview}</p>
+		<div className={styles.titleMain}>
+			<div className={styles.titlePhoto} >
+				<div style={{ background: `linear-gradient(-90deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top left` }}>image</div>
+				<div>
+					<h1>{movie.title}</h1>
+					<p>{movie.overview}</p>
+				</div>
 			</div>
 			<div className="titleInfo">
 				<img src={movie.poster} alt="" />

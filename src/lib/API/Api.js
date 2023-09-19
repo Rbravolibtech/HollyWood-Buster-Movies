@@ -68,7 +68,7 @@ export async function getTitlePageInfo(id, type) {
                 id: movieResults.id,
                 title: movieResults.title,
                 poster: "https://image.tmdb.org/t/p/w300" + movieResults.poster_path,
-                photo: "https://image.tmdb.org/t/p/w300" + movieResults.backdrop_path,
+                photo: "https://image.tmdb.org/t/p/w1280" + movieResults.backdrop_path,
                 date: movieResults.release_date.slice(0, 4),
                 rating: movieResults.vote_average,
                 runtime: movieResults.runtime,

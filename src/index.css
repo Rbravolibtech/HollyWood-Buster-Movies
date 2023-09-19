@@ -112,22 +112,6 @@ ul.div {
 	justify-content: center;
 }
 
-.titleMain {
-	margin-left: 200px;
-}
-
-.titlePhoto {
-	background-repeat: no-repeat;
-	height: 60vh;
-	background-size: cover;
-	text-align: center;
-	padding-right: 60px;
-	padding-left: 1500px;
-}
-
-.titleInfo {
-	display: flex;
-}
 
 .footer {
 	display: flex;
