@@ -112,6 +112,10 @@ ul.div {
 	justify-content: center;
 }
 
+.titleMain {
+	margin-left: 220px;
+}
+
 .footer {
 	display: flex;
 	justify-content: start;

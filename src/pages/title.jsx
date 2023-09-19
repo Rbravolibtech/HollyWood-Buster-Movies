@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./index.module.css";
 import { useSearchParams } from "react-router-dom";
 import { getTitlePageInfo } from "../lib/API/Api";
 
@@ -23,7 +24,7 @@ function Page() {
 			} catch (error) {
 				setError("An error occurred while fetching the data");
 			} finally {
-				setLoading(false); // Move setLoading inside fetchData
+				setLoading(false);
 			}
 		}
 
@@ -37,7 +38,7 @@ function Page() {
 	if (error !== "") return <p>ERROR BUDDY</p>
 
 	return (
-		<div>
+		<div className="titleMain">
 			<div>
 				<img src={movie.photo} alt="" />
 			</div>
@@ -46,10 +47,9 @@ function Page() {
 			</div>
 
 			<div>
-				<p>{movie.rating}</p>
-				<p>{movie.date}</p>
-				<p>{movie.runtime}</p>
-				<p>{movie.language}</p>
+				<p>Rating: {movie.rating}</p>
+				<p>Release Year: {movie.date}</p>
+				<p>{movie.type === 'movie' ? `${movie.runtime} Minutes` : `${movie.runtime} Seasons`}</p>
 			</div>
 		</div>
 	);

@@ -72,7 +72,6 @@ export async function getTitlePageInfo(id, type) {
                 date: movieResults.release_date.slice(0, 4),
                 rating: movieResults.vote_average,
                 runtime: movieResults.runtime,
-                language: movieResults.original_language,
                 overview: movieResults.overview
             };
         }
@@ -95,7 +94,6 @@ export async function getTitlePageInfo(id, type) {
                 date: TVResults.first_air_date.slice(0, 4),
                 rating: TVResults.vote_average,
                 runtime: TVResults.number_of_seasons,
-                language: TVResults.original_language,
                 overview: TVResults.overview
             }
         }

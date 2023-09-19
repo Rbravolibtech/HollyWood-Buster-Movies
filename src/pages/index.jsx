@@ -41,7 +41,7 @@ function Page() {
 	}, []);
 
 	return (
-		<div className={styles.mainContent}>
+		<div>
 			<div className={styles.titleCards}>
 				<h2>Movies</h2>
 				<div className={styles.movies}>
