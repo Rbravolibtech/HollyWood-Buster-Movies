@@ -11,3 +11,16 @@
 	display: flex;
     height: 40vh;
 }
+
+.showPhoto {
+    width: 1280px;
+}
+
+.showOverview {
+    text-align: center;
+    padding: 6em;
+}
+
+.showOverview p {
+    font-size: larger;
+}

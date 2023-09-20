@@ -1,6 +1,3 @@
-import Container from "react-bootstrap/Container";
-//import Nav from "react-bootstrap/Nav";
-//import Navbar from "react-bootstrap/Navbar";
 import "../index.css";
 import { Link } from "react-router-dom";
 
@@ -34,7 +31,7 @@ export default function Layout(props) {
 					</ul>
 				</nav>
 			</header>
-			<div className="slogan">
+			<div className="slogan" id="slogan">
 				<h1>
 					Hollywood<span style={{ color: "#f89c2a" }}>Buster</span>
 				</h1>

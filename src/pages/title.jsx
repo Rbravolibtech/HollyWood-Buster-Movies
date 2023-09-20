@@ -31,6 +31,13 @@ function Page() {
 		fetchData();
 	}, []);
 
+	React.useEffect(() => {
+		const sloganElement = document.getElementById("slogan");
+		if (sloganElement) {
+			sloganElement.style.display = "none";
+		}
+	}, []);
+
 	if (loading) {
 		return <p>Loading...</p>
 	}
@@ -42,8 +49,8 @@ function Page() {
 	return (
 		<div className={styles.titleMain}>
 			<div className={styles.titlePhoto} >
-				<div style={{ background: `linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top right`, width: "70%" }}></div>
-				<div style={{ backgroundColor: "black", width: "30%" }}>
+				<div className={styles.showPhoto} style={{ background: `linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top right` }}></div>
+				<div className={styles.showOverview} style={{ backgroundColor: "black" }}>
 					<h1>{movie.title}</h1>
 					<p>{movie.overview}</p>
 				</div>
