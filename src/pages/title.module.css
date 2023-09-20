@@ -4,12 +4,22 @@
 
 .titlePhoto {
     display: flex;
-    height: 60vh;
+    height: 50vh
 }
 
 .titleInfo {
 	display: flex;
     height: 40vh;
+    justify-content: center;
+    margin: 20px;
+}
+
+.titleInfo p {
+    margin-left: 20px;
+    align-content: center;
+    padding-top: 50px;
+    font-size: large;
+    font-weight: bold;
 }
 
 .showPhoto {
@@ -17,10 +27,17 @@
 }
 
 .showOverview {
+    margin: 0;
     text-align: center;
     padding: 6em;
+    max-width: 40%;
 }
 
 .showOverview p {
     font-size: larger;
+    margin: 0;
+}
+
+.showOverview h1 {
+    margin: 0
 }

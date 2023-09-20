@@ -55,7 +55,7 @@ h2 {
 	width: 8vw;
 	left: 0;
 	background-color: rgb(83, 83, 83);
-	transition: 0.5s ease;
+	/* transition: 0.5s ease; */
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
