@@ -90,7 +90,7 @@ export async function getTitlePageInfo(id, type) {
                 id: TVResults.id,
                 title: TVResults.name,
                 poster: "https://image.tmdb.org/t/p/w300" + TVResults.poster_path,
-                photo: "https://image.tmdb.org/t/p/w300" + TVResults.backdrop_path,
+                photo: "https://image.tmdb.org/t/p/w1280" + TVResults.backdrop_path,
                 date: TVResults.first_air_date.slice(0, 4),
                 rating: TVResults.vote_average,
                 runtime: TVResults.number_of_seasons,

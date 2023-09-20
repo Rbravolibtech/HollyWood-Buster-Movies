@@ -49,20 +49,21 @@ function Page() {
 	return (
 		<div className={styles.titleMain}>
 			<div className={styles.titlePhoto} >
-				<div className={styles.showPhoto} style={{ background: `linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 84%, rgba(0, 0, 0, 0) 96%), url(${movie.photo}) no-repeat top center` }}></div>
+				<img src={movie.photo} alt={movie.title} className={styles.showPhoto} />
 				<div className={styles.showOverview} style={{ backgroundColor: "black" }}>
 					<h1>{movie.title}</h1>
+					<p className={styles.showStats}>{movie.rating}/10 | {movie.date} | {type === 'movie' ? `Runtime: ${movie.runtime} Minutes` : `Seasons: ${movie.runtime}`}</p>
 					<p>{movie.overview}</p>
 				</div>
 			</div>
-			<div className={styles.titleInfo}>
+			{/* <div className={styles.titleInfo}>
 				<img src={movie.poster} alt="" />
 				<div>
 					<p>Rating: {movie.rating}</p>
 					<p>Release Year: {movie.date}</p>
 					<p>{type === 'movie' ? `Runtime: ${movie.runtime} Minutes` : `Seasons: ${movie.runtime}`}</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }

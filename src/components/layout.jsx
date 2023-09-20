@@ -36,7 +36,7 @@ export default function Layout(props) {
 					Hollywood<span style={{ color: "#f89c2a" }}>Buster</span>
 				</h1>
 			</div>
-			{props.children}
+			<div>{props.children}</div>
 			<footer className="footer">
 				<p>Powered by TMDb</p>
 			</footer>

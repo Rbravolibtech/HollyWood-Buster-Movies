@@ -1,10 +1,11 @@
-.titleMain {
+/* .titleMain {
 	margin-left: 200px;
 }
 
 .titlePhoto {
     display: flex;
-    height: 50vh
+    flex-wrap: nowrap;
+    max-width: 100%;
 }
 
 .titleInfo {
@@ -22,15 +23,11 @@
     font-weight: bold;
 }
 
-.showPhoto {
-    width: 1280px;
-}
-
 .showOverview {
     margin: 0;
     text-align: center;
     padding: 6em;
-    max-width: 40%;
+    width: calc(40% - 200px);
 }
 
 .showOverview p {
@@ -40,4 +37,49 @@
 
 .showOverview h1 {
     margin: 0
+}
+
+.showPhoto {
+    object-fit: cover;
+    width: calc(60% - 200px);
+} */
+
+.titleMain {
+    padding-left: 200px;
+}
+
+.titlePhoto {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.showPhoto {
+    width: 60%;
+}
+
+.showOverview {
+    padding: 200px 20px 20px 20px;
+    width: 40%;
+    text-align: center;
+}
+
+.showStats {
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .titlePhoto {
+        flex-direction: column;
+    }
+
+    .showPhoto {
+        width: 100%;
+        height: 400px;
+        box-shadow: inset 0 -30px 100px -30px black;
+    }
+
+    .showOverview {
+        width: 100%;
+    }
 }
