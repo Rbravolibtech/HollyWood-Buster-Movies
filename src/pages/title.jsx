@@ -56,14 +56,6 @@ function Page() {
 					<p>{movie.overview}</p>
 				</div>
 			</div>
-			{/* <div className={styles.titleInfo}>
-				<img src={movie.poster} alt="" />
-				<div>
-					<p>Rating: {movie.rating}</p>
-					<p>Release Year: {movie.date}</p>
-					<p>{type === 'movie' ? `Runtime: ${movie.runtime} Minutes` : `Seasons: ${movie.runtime}`}</p>
-				</div>
-			</div> */}
 		</div>
 	);
 }
