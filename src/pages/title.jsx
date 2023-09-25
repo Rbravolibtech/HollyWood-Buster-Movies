@@ -31,13 +31,6 @@ function Page() {
 		fetchData();
 	}, []);
 
-	React.useEffect(() => {
-		const sloganElement = document.getElementById("slogan");
-		if (sloganElement) {
-			sloganElement.style.display = "none";
-		}
-	}, []);
-
 	if (loading) {
 		return <p>Loading...</p>
 	}
@@ -47,16 +40,18 @@ function Page() {
 	const type = searchParams.get("type");
 
 	return (
-		<div className={styles.titleMain}>
-			<div className={styles.titlePhoto} >
+		<div className={styles.titlePhoto} >
+			<div className={styles.photoGradient}>
 				<img src={movie.photo} alt={movie.title} className={styles.showPhoto} />
-				<div className={styles.showOverview} style={{ backgroundColor: "black" }}>
-					<h1>{movie.title}</h1>
-					<p className={styles.showStats}>{movie.rating}/10 | {movie.date} | {type === 'movie' ? `Runtime: ${movie.runtime} Minutes` : `Seasons: ${movie.runtime}`}</p>
-					<p>{movie.overview}</p>
-				</div>
+				<div className={styles.imageShadow}></div>
+			</div>
+			<div className={styles.showOverview} style={{ backgroundColor: "black" }}>
+				<h1>{movie.title}</h1>
+				<p className={styles.showStats}>{movie.rating}/10 | {movie.date} | {type === 'movie' ? `Runtime: ${movie.runtime} Minutes` : `Seasons: ${movie.runtime}`}</p>
+				<p>{movie.overview}</p>
 			</div>
 		</div>
+
 	);
 }
 
