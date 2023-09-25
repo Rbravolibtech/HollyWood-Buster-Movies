@@ -14,6 +14,10 @@
 	-webkit-text-size-adjust: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 header {
 	width: 200px;
 }
@@ -31,12 +35,6 @@ a:hover {
 	color: #f7c383;
 }
 
-.cardTitle {
-	color: white;
-	display: block;
-	text-align: center;
-}
-
 body {
 	margin: 0;
 	overflow-x: hidden;
@@ -49,6 +47,12 @@ h1 {
 
 h2 {
 	font-size: 3em;
+}
+
+.cardTitle {
+	color: white;
+	display: block;
+	text-align: center;
 }
 
 .sideNav {
@@ -82,12 +86,13 @@ ul.div {
 .slogan {
 	display: flex;
 	justify-content: center;
+	padding-left: 200px;
 }
 
 
 .footer {
 	display: flex;
-	justify-content: start;
+	justify-content: center;
 	margin: 10px;
 	padding-left: 210px;
 }

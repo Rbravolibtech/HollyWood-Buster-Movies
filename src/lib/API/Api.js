@@ -67,10 +67,9 @@ export async function getTitlePageInfo(id, type) {
             return {
                 id: movieResults.id,
                 title: movieResults.title,
-                poster: "https://image.tmdb.org/t/p/w300" + movieResults.poster_path,
                 photo: "https://image.tmdb.org/t/p/w1280" + movieResults.backdrop_path,
                 date: movieResults.release_date.slice(0, 4),
-                rating: movieResults.vote_average,
+                rating: movieResults.vote_average.toFixed(1),
                 runtime: movieResults.runtime,
                 overview: movieResults.overview
             };
@@ -89,10 +88,9 @@ export async function getTitlePageInfo(id, type) {
             return {
                 id: TVResults.id,
                 title: TVResults.name,
-                poster: "https://image.tmdb.org/t/p/w300" + TVResults.poster_path,
                 photo: "https://image.tmdb.org/t/p/w1280" + TVResults.backdrop_path,
                 date: TVResults.first_air_date.slice(0, 4),
-                rating: TVResults.vote_average,
+                rating: TVResults.vote_average.toFixed(1),
                 runtime: TVResults.number_of_seasons,
                 overview: TVResults.overview
             }
