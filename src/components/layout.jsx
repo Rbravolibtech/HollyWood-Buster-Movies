@@ -41,7 +41,7 @@ export default function Layout(props) {
 					<h1>
 						<span style={{ color: "#f89c2a" }}>Buster</span>
 					</h1>
-					<img className="glass" src="../../public/broken-glass-200.png" alt="broken glass overlay" />
+					<img className="glass" src="/broken-glass-200.png" alt="broken glass overlay" />
 				</div>
 			</div>
 			<div>{props.children}</div>
