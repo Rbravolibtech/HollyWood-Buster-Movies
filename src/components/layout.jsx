@@ -1,6 +1,5 @@
 import "../index.css";
 import { Link } from "react-router-dom";
-import TextExplosion from "./TextExplosion";
 
 export default function Layout(props) {
 	return (
@@ -33,9 +32,17 @@ export default function Layout(props) {
 				</nav>
 			</header>
 			<div className="slogan" id="slogan">
-				<h1>
-					Hollywood<span style={{ color: "#f89c2a" }}>Buster</span>
-				</h1>
+				<div>
+					<h1>
+						Hollywood
+					</h1>
+				</div>
+				<div className="buster">
+					<h1>
+						<span style={{ color: "#f89c2a" }}>Buster</span>
+					</h1>
+					<img className="glass" src="../../public/broken-glass-200.png" alt="broken glass overlay" />
+				</div>
 			</div>
 			<div>{props.children}</div>
 			<footer className="footer">
