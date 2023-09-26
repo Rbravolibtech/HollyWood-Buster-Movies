@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./layout";
-import classes from "./TextExplosion.css";
+// import styles from "./TextExplosion.module.css";
 
 const TextExplosion = () => {
 	const [text, setText] = useState("Click Me!");
@@ -14,7 +14,7 @@ const TextExplosion = () => {
 	}, []); // The empty dependency array ensures this effect runs once on mount
 
 	return (
-		<div className={`text-explosion ${exploded ? "exploded" : ""}`}>
+		<div className={`text-explosion${exploded ? ".exploded" : ""}`}>
 			{Buster}
 		</div>
 	);

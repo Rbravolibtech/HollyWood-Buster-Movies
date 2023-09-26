@@ -1,5 +1,6 @@
 import "../index.css";
 import { Link } from "react-router-dom";
+import TextExplosion from "./TextExplosion";
 
 export default function Layout(props) {
 	return (
