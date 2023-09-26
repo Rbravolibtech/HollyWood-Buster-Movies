@@ -71,16 +71,16 @@ h2 {
 }
 
 .navList {
-	padding: 15px 0 0 0;
+	padding: 30px 0;
 }
 
-ul.div {
-	margin: 10px;
+.navLink {
+	padding: 15px 0px;
 }
 
 .logo {
 	padding: 40px 0 40px 0;
-	height: 200px;
+	height: 280px;
 }
 
 .slogan {
