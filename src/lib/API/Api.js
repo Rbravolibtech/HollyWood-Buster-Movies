@@ -141,7 +141,6 @@ export async function getTopRatedTVShows() {
             throw new Error(`HTTP error. Status: ${response.status}`);
         }
         const { results } = await response.json();
-        console.log(results);
         return results.map((i) => {
             return {
                 id: i.id,
@@ -158,10 +157,10 @@ export async function getTopRatedTVShows() {
     }
 }
 
-//Search results for search page - this probably needs work
+//Search results for search page - this needs work
 export async function getSearchResults() {
     try {
-        const searchResultsURL = 'https://api.themoviedb.org/3/tv/top_rated?api_key=' + import.meta.env.VITE_TMDB_KEY;
+        const searchResultsURL = 'https://api.themoviedb.org/3/search/multi?api_key=' + import.meta.env.VITE_TMDB_KEY;
         const response = await fetch(searchResultsURL);
         if (!response.ok) {
             throw new Error(`HTTP error. Status: ${response.status}`);
