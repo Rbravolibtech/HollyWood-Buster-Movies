@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import Card from "../components/card";
-import { getTrendingMovies } from "../lib/API/Api";
+import { getTopRatedMovies } from "../lib/API/Api";
 
 function Page() {
 	const [loadingMovies, setLoadingMovies] = useState(false);
@@ -12,7 +12,7 @@ function Page() {
 		setLoadingMovies(true);
 		const fetchData = async () => {
 			try {
-				const moviesArray = await getTrendingMovies();
+				const moviesArray = await getTopRatedMovies();
 				if (moviesArray.length < 1) {
 					setErrorMovies("No movies found");
 				} else {

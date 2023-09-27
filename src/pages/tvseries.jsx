@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.css";
 import Card from "../components/card";
-import { getTrendingTVShows } from "../lib/API/Api";
+import { getTopRatedTVShows } from "../lib/API/Api";
 
 function Page() {
 	const [loadingTVShows, setLoadingTVShows] = useState(false);
@@ -12,7 +12,7 @@ function Page() {
 		setLoadingTVShows(true);
 		const tvFetch = async () => {
 			try {
-				const tvArray = await getTrendingTVShows();
+				const tvArray = await getTopRatedTVShows();
 				if (tvArray.length < 1) {
 					setErrorTVShows("No TV shows found");
 				} else {
