@@ -46,7 +46,7 @@ function Page() {
 	return (
 		<div>
 			<div className={styles.titleCards}>
-				<h2>Movies</h2>
+				<h2>Trending Movies</h2>
 				<div className={styles.movies}>
 					{loadingMovies && <p>Loading</p>}
 					{errorMovies && <p>{errorMovies}</p>}
@@ -59,7 +59,7 @@ function Page() {
 			</div>
 			<div className={styles.titleCards}>
 				<div>
-					<h2>TV Shows</h2>
+					<h2>Trending TV Shows</h2>
 				</div>
 				<div className={styles.movies}>
 					{loadingTVShows && <p>Loading</p>}
