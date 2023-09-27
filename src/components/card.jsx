@@ -8,7 +8,9 @@ function Cards({ movie }) {
 		>
 			<img src={movie.image} />
 			<h4>
-				{movie.title} | {movie.date}
+				{movie.title}
+				<br />
+				{movie.date}
 			</h4>
 		</a>
 	);

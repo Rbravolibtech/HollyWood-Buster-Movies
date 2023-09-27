@@ -144,7 +144,7 @@ export async function getTopRatedTVShows() {
         return results.map((i) => {
             return {
                 id: i.id,
-                title: i.title,
+                title: i.name,
                 image: "https://image.tmdb.org/t/p/w300" + i.poster_path,
                 date: i.first_air_date.slice(0, 4),
                 type: "tv"

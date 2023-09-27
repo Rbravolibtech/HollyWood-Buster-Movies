@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./index.module.css";
+import styles from "./movies.module.css";
 import Card from "../components/card";
 import { getTopRatedTVShows } from "../lib/API/Api";
 
@@ -31,7 +31,7 @@ function Page() {
 	return (
 		<div>
 			<div className={styles.titleCards}>
-				<h2>TV Shows</h2>
+				<h2>Top Rated TV Shows</h2>
 				<div className={styles.movies}>
 					{loadingTVShows && <p>Loading</p>}
 					{errorTVShows && <p>{errorTVShows}</p>}
