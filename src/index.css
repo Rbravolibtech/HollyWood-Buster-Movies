@@ -53,6 +53,7 @@ h2 {
 	color: white;
 	display: block;
 	text-align: center;
+	max-width: 300px;
 }
 
 .sideNav {
@@ -96,19 +97,19 @@ h2 {
 	padding-left: 210px;
 }
 
+.glass {
+	position: absolute;
+	z-index: 1;
+	margin-top: -10px;
+	opacity: .7;
+}
+
 .buster {
 	display: flex;
 	position: relative;
 	z-index: -1;
 	transform: scale();
 	animation: breaking 0.5s ease-in;
-}
-
-.glass {
-	position: absolute;
-	z-index: 1;
-	margin-top: -10px;
-	opacity: .7;
 }
 
 @keyframes breaking {

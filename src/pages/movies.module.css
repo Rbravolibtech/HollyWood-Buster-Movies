@@ -1,0 +1,17 @@
+.movies {
+    display: flex;
+    column-gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+.titleCards {
+    overflow-x: auto;
+    margin-left: 225px;
+    margin-right: 25px;
+}
+
+.titleCards h2 {
+    display: flex;
+    justify-content: center;
+}
