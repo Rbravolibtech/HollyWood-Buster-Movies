@@ -158,9 +158,9 @@ export async function getTopRatedTVShows() {
 }
 
 //Search results for search page - this needs work
-export async function getSearchResults() {
+export async function getSearchResults(searchText) {
     try {
-        const searchResultsURL = 'https://api.themoviedb.org/3/search/multi?api_key=' + import.meta.env.VITE_TMDB_KEY;
+        const searchResultsURL = 'https://api.themoviedb.org/3/search/multi?query=' + searchText + '&api_key=' + import.meta.env.VITE_TMDB_KEY;
         const response = await fetch(searchResultsURL);
         if (!response.ok) {
             throw new Error(`HTTP error. Status: ${response.status}`);
