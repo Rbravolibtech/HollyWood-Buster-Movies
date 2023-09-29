@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./index.module.css";
 import Card from "../components/card";
 import { getTrendingMovies } from "../lib/API/Api";
 import { getTrendingTVShows } from "../lib/API/Api";
+
 import Search from "../pages/search";
 
 function Page() {
@@ -13,8 +14,6 @@ function Page() {
 	const [loadingTVShows, setLoadingTVShows] = React.useState(false);
 	const [errorTVShows, setErrorTVShows] = React.useState("");
 	const [TVShows, setTVShows] = React.useState([]);
-	// const[]
-
 
 	React.useEffect(() => {
 		setLoadingMovies(true);
