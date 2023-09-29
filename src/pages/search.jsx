@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { getSearchResults } from "../lib/API/Api";
 import Card from "../components/card";
+import styles from "./search.module.css";
 
 function Page() {
 	const [searchText, setSearchText] = useState("");
 	const [page, setPage] = useState(1);
 	const [searchResults, setSearchResults] = useState([]);
-
-	const BarStyle = {
-		width: "100%",
-		background: "#F0F0F0",
-		border: "2px solid #ccc",
-		padding: "0.8% ",
-	};
 
 	const submitQuery = async (e) => {
 		e.preventDefault();
@@ -23,7 +17,7 @@ function Page() {
 	return (
 		<form onSubmit={submitQuery}>
 			<input
-				style={BarStyle}
+				className={styles.barStyle}
 				value={searchText}
 				placeholder={"SEARCH MOVIES AND TV SHOWS"}
 				onInput={(e) => setSearchText(e.target.value)}

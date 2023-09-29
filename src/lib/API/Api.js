@@ -172,7 +172,7 @@ export async function getSearchResults(searchText) {
                 id: i.id,
                 title: i.title || i.name,
                 image: "https://image.tmdb.org/t/p/w300" + i.poster_path,
-                date: i.first_air_date.slice(0, 4) || i.first_air_date.slice(0, 4),
+                date: i.first_air_date && i.first_air_date.slice(0, 4) || i.release_date && i.release_date.slice(0, 4),
                 type: i.media_type
             }
         })
