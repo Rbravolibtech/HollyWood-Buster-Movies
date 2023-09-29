@@ -4,10 +4,10 @@ import Card from "../components/card";
 
 const Search = ({ keyword, onChange }) => {
 	const BarStyle = {
-		width: "100rem",
+		width: "100%",
 		background: "#F0F0F0",
 		border: "2px solid #ccc",
-		padding: "0.5rem",
+		padding: "0.8% ",
 	};
 	return (
 		<input
