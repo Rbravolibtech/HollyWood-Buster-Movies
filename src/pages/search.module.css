@@ -1,6 +1,10 @@
 .barStyle {
-    width: "100%";
-    background: "#F0F0F0";
-    border: "2px solid #ccc";
-    padding: "0.8% ";
+    width: 100%;
+    background: #f89c2a;
+    border: 3px solid #ccc;
+    padding: 0.8%;
+    margin-left: 220px;
+    font-size: x-large;
+    font-weight: bold;
 }
+
