@@ -5,37 +5,20 @@ import styles from "./search.module.css";
 
 function Page() {
 	const [searchText, setSearchText] = useState("");
-	// const [page, setPage] = useState(1);
 	const [searchResults, setSearchResults] = useState([]);
 	const [loadingSearchResults, setLoadingSearchResults] = useState(false);
 	const [errorResults, setErrorResults] = useState("");
 
 	const submitQuery = async (e) => {
 		e.preventDefault();
-		const result = await getSearchResults(searchText);
-		setSearchResults(result);
-	};
-
-	useEffect(() => {
 		setLoadingSearchResults(true);
-		const fetchData = async () => {
-			try {
-				const searchArray = await getSearchResults(searchText);
-				if (searchArray.length < 1) {
-					setErrorResults("No results found");
-				} else {
-					setSearchResults(searchArray);
-				}
-			} catch (error) {
-				setErrorResults("An error occurred while fetching results.");
-			} finally {
-				setLoadingSearchResults(false);
-			}
-		};
-
-		fetchData();
-	}, []);
-
+		const result = await getSearchResults(searchText);
+		if (result.length < 1) {
+			setErrorResults("Could not find any movies that fit that criteria")
+		}
+		setSearchResults(result);
+		setLoadingSearchResults(false);
+	};
 
 	return (
 		<>

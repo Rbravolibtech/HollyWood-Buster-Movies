@@ -171,7 +171,7 @@ export async function getSearchResults(searchText) {
             return {
                 id: i.id,
                 title: i.title || i.name,
-                image: "https://image.tmdb.org/t/p/w300" + i.poster_path,
+                image: i.poster_path ? "https://image.tmdb.org/t/p/w300" + i.poster_path : "/No-Image-Placeholder-300.png",
                 date: i.first_air_date && i.first_air_date.slice(0, 4) || i.release_date && i.release_date.slice(0, 4),
                 type: i.media_type
             }
