@@ -4,8 +4,6 @@ import Card from "../components/card";
 import { getTrendingMovies } from "../lib/API/Api";
 import { getTrendingTVShows } from "../lib/API/Api";
 
-import Search from "../pages/search";
-
 function Page() {
 	const [loadingMovies, setLoadingMovies] = React.useState(false);
 	const [errorMovies, setErrorMovies] = React.useState("");
