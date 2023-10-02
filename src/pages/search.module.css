@@ -1,11 +1,11 @@
 .barStyle {
     display: flex;
-    width: 100%;
+    width: calc(100% - 250px);
     background: #f89c2a;
     border: 3px solid #ccc;
     padding: 30px;
     margin-left: 225px;
-    margin-right: 25px;
+    margin-right: auto;
     font-size: x-large;
     font-weight: bold;
 }
