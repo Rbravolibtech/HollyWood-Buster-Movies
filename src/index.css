@@ -56,6 +56,11 @@ h2 {
 	max-width: 300px;
 }
 
+.cardTitle img {
+	max-width: 300px;
+	min-height: 450px;
+}
+
 .sideNav {
 	height: 100%;
 	position: fixed;
